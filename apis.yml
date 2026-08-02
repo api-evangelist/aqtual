@@ -1,8 +1,25 @@
 aid: aqtual
 name: Aqtual
-description: 'Aqtual is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Aqtual, Inc. is a Hayward, California precision-medicine company founded
+  in 2019 by Diana Abdueva (Founder and CEO) and co-founder Rich Rava, developing blood-based
+  diagnostics on a proprietary "active chromatin" cell-free DNA (cfDNA) platform. Rather
+  than reading cfDNA for mutations alone, Aqtual captures the previously unexplored
+  cfDNA fragments bound to active chromatin, so a single routine blood draw reports
+  on DNA, epigenetic regulation and protein-DNA binding together — surveying on the
+  order of 200,000 gene promoters, 400,000 enhancers, 50,000 insulators, 20,000 silencers
+  and a million transcription-factor binding sites. Its lead product is a therapy-response
+  prediction test for rheumatoid arthritis, evaluated in the prospective PRIMA-102
+  observational trial (NCT05936970), with oncology programs in leiomyosarcoma immunotherapy
+  response and early colorectal cancer detection, and stated expansion into immunology,
+  cardiovascular, metabolic and neurological disease. The company raised a USD 16 million
+  Series A in October 2023 and over USD 31 million in Series B funding announced July
+  2025 from Bold Capital, the Bold Longevity Growth Fund, Genoa Ventures, Manta Ray
+  Ventures and Yu Galaxy. Aqtual is a clinical-diagnostics and life-sciences business,
+  not a software vendor: as of August 2026 it publishes no developer portal, no API
+  documentation and no machine-readable API contract of any kind, and every /.well-known/
+  and contract-discovery path on aqtual.com returns 404.'
 url: https://raw.githubusercontent.com/api-evangelist/aqtual/refs/heads/main/apis.yml
+image: https://aqtual.com/apple-touch-icon-152x152.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,12 +29,54 @@ created: '2026-08-02'
 modified: '2026-08-02'
 tags:
 - Company
+- Precision Medicine
+- Diagnostics
+- Liquid Biopsy
+- Cell-Free DNA
+- Epigenetics
+- Genomics
+- Biotechnology
+- Oncology
+- Rheumatology
+- Health Care
+- United States
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-08-02'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
 common:
 - type: Website
+  url: https://aqtual.com/
+- type: Blog
+  url: https://aqtual.com/blog/
+- type: Press
+  url: https://aqtual.com/newsroom/
+- type: Publications
+  url: https://aqtual.com/publications/
+- type: Team
+  url: https://aqtual.com/team/
+- type: Support
+  url: mailto:media@aqtual.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aqtual
+- type: PitchBook
+  url: https://pitchbook.com/profiles/company/470599-39
+- type: SecondaryMarket
   url: https://forgeglobal.com/aqtual_stock/
+- type: ClinicalTrial
+  url: https://clinicaltrials.gov/study/NCT05936970
+- type: DomainSecurity
+  url: security/aqtual-domain-security.yml
+- type: Packages
+  url: packages/aqtual-packages.yml
+- type: Conformance
+  url: conformance/aqtual-conformance.yml
+- type: LLMsTxt
+  url: llms/aqtual-llms.txt

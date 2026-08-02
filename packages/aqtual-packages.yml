@@ -1,0 +1,42 @@
+generated: '2026-08-02'
+method: searched
+source: registry searches of npm, PyPI, RubyGems, crates.io, Packagist, NuGet, Maven Central and GitHub (2026-08-02)
+result: none
+notes: >-
+  Aqtual publishes no client SDK, because it publishes no public API. It is a clinical
+  diagnostics and life-sciences company, not a software vendor. Every registry query
+  below returned either zero results or unrelated fuzzy matches on the string "aqtual"
+  / "actual". No `SDKs` pointer is wired in apis.yml and the sdk_count checks are
+  correctly left unearned.
+packages: []
+registries_checked:
+- registry: npm
+  query: aqtual
+  result: 0 packages; the @aqtual scope does not exist (404 on @aqtual/sdk)
+- registry: pypi
+  query: aqtual, aqtual-sdk
+  result: 404 - no project under either spelling
+- registry: rubygems
+  query: aqtual
+  result: 0 results (empty array)
+- registry: crates.io
+  query: aqtual
+  result: 0 crates
+- registry: packagist
+  query: aqtual
+  result: >-
+    210 fuzzy matches, all on the substring "actual" (dvdoug/boxpacker,
+    configcat/configcat-client, mll-lab/laravel-comment, ...). None are Aqtual packages.
+- registry: nuget
+  query: aqtual
+  result: 0 hits
+- registry: maven-central
+  query: aqtual
+  result: 0 hits
+- registry: github
+  query: orgs/aqtual, users?q=aqtual
+  result: >-
+    No GitHub organization named `aqtual` exists (api.github.com/orgs/aqtual returns 404).
+    A personal account github.com/aqtual exists (created 2025-04-07) with 1 public repo,
+    no name, no company, no bio and no website - there is no evidence it is first-party
+    to Aqtual, Inc., so it is not recorded as a GitHubOrganization pointer.

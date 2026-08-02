@@ -1,0 +1,91 @@
+generated: '2026-08-02'
+method: probed
+source: live probes of /.well-known/ and contract-discovery paths on Aqtual hosts
+result: >-
+  none - no /.well-known/ document and no machine-readable API contract is published
+  on any Aqtual host. aqtual.com is a Nuxt-rendered marketing/newsroom site with five
+  static pages plus a two-post blog. No API host exists to probe.
+pointer_note: >-
+  Deliberately NOT wired as `type: WellKnown` in apis.yml. The well_known_catalog
+  scoring check (4 pts) reads that pointer as evidence of a real /.well-known/api-catalog
+  (RFC 9727) linkset. Aqtual publishes none, so the pointer is withheld and this file
+  stands only as the recorded negative probe.
+hosts:
+- host: https://aqtual.com
+  platform: Nuxt (server-side rendered), nginx origin
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    note: >-
+      bare nginx "404 Not Found" HTML from the origin, i.e. a genuine miss rather than
+      the site's own Nuxt 404 page
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+    note: origin returned an empty JSON object body, not a spec
+  - path: /openapi.yaml
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /v1/openapi.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /docs
+    status: 404
+  - path: /redoc
+    status: 404
+  - path: /graphql
+    status: 404
+    note: GET returns the Nuxt 404 shell; there is no GraphQL surface to introspect
+  - path: /robots.txt
+    status: 200
+    note: >-
+      Allows all user agents; disallows /api/, /admin/, /control/ and /media/. Those
+      are the CMS/back-office paths of the Nuxt site, not a public Aqtual API - all
+      of them 404 anonymously. No AI-crawler block list is present.
+  - path: /sitemap.xml
+    status: 200
+    note: >-
+      sitemap index pointing at sitemap-static.xml (5 URLs - /, /team/, /newsroom/,
+      /publications/, /blog/) and sitemap-blogs.xml (2 posts, last modified 2024-07-26)
+- host: https://www.aqtual.com
+  note: 301-redirects to the apex host; identical results on every path above
+hosts_that_do_not_resolve:
+- api.aqtual.com
+- developer.aqtual.com
+- docs.aqtual.com
+- portal.aqtual.com
+- app.aqtual.com
+- trust.aqtual.com
+- status.aqtual.com
+contract_discovery:
+  openapi: >-
+    not found - probed /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json,
+    /api-docs, /docs and /redoc on the apex host root (not just the docs host); all 404.
+    There is no separate API host to probe.
+  graphql: not applicable - no /graphql surface and no API host exists
+  mcp: not found - no hosted MCP server, no mcp. subdomain, no MCP mention in any docs
+  a2a_agent_card: >-
+    not found - both /.well-known/agent-card.json and the legacy /.well-known/agent.json
+    return 404 on aqtual.com. No a2a/ artifact is written and no AgentCard pointer is wired.
+  conclusion: >-
+    Aqtual publishes no machine-readable API contract of any kind. This is a completed
+    negative result, not an unfinished probe.
+x-evidence:
+  fetched: '2026-08-02'
+  method: curl GET with redirect-following, 15s timeout, apex and www hosts
+  dns_method: HTTPS connect attempt on candidate API/docs/portal subdomains (all failed to resolve)

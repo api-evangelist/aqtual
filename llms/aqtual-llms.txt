@@ -1,0 +1,65 @@
+# Aqtual
+
+> Aqtual, Inc. is a Hayward, California precision-medicine company founded in 2019 by Diana Abdueva (Founder and CEO) with co-founder Rich Rava. It develops blood-based diagnostics on a proprietary "active chromatin" cell-free DNA (cfDNA) platform that reads DNA, epigenetic regulation and protein-DNA binding from a single routine blood draw. Its lead product is a therapy-response prediction test for rheumatoid arthritis; oncology programs cover immunotherapy response in leiomyosarcoma and early colorectal cancer detection.
+
+Aqtual is a clinical-diagnostics and life-sciences business, not a software vendor. As of 2026-08-02 it publishes **no public API, no developer portal, no API documentation and no machine-readable API contract**. Its web presence is a five-page Nuxt marketing and newsroom site plus a two-post blog. Do not assume or invent an `api.aqtual.com`, `docs.aqtual.com` or `developer.aqtual.com` endpoint — none of those hosts resolve. The `Disallow: /api/`, `/admin/`, `/control/` and `/media/` lines in its robots.txt refer to the site CMS's own back-office paths, not to an Aqtual API; all of them 404 anonymously.
+
+## Company
+
+- [Aqtual](https://aqtual.com/): company website (mission, technology, rheumatoid arthritis program, contacts)
+- [Newsroom](https://aqtual.com/newsroom/): press releases, 2023 to present
+- [Publications](https://aqtual.com/publications/): peer-reviewed papers, posters and conference abstracts
+- [Team](https://aqtual.com/team/): leadership and scientific team
+- [Blog](https://aqtual.com/blog/): two posts, last updated July 2024
+- [PitchBook profile](https://pitchbook.com/profiles/company/470599-39): valuation, funding and investor record
+- [Forge Global](https://forgeglobal.com/aqtual_stock/): secondary-market listing for private shares
+
+Location: 31145 San Antonio St, Hayward, CA 94544.
+
+## Technology
+
+An "active chromatin" cfDNA platform. Instead of reading cell-free DNA for mutations alone, Aqtual captures the cfDNA fragments associated with active chromatin — regions of the genome where genes are actively being expressed — so a single blood draw reports on gene regulation, epigenetics and transcriptomics together. Company materials describe surveying on the order of 200,000 gene promoters, 400,000 enhancers, 50,000 insulators, 20,000 silencers and one million transcription-factor binding sites. Stated expansion areas beyond rheumatology and oncology are immunology, cardiovascular, metabolic and neurological disease.
+
+## Clinical programs
+
+- **Rheumatoid arthritis therapy selection** — lead product. Evaluated in PRIMA-102, a prospective observational trial: [ClinicalTrials.gov NCT05936970](https://clinicaltrials.gov/study/NCT05936970). More than 1,300 patients enrolled; completion targeted Q4 2025.
+- **Leiomyosarcoma / sarcoma immunotherapy response** — "Predicting immunotherapy benefit in leiomyosarcoma through active chromatin cfDNA profiling", *npj Precision Oncology*, May 2026; ASCO 2026 abstract on checkpoint-inhibitor resistance mechanisms.
+- **Early colorectal cancer detection** — ASCO 2025 abstract on an active chromatin cfDNA assay.
+- Foundational method paper: ["Extracting regulatory active chromatin footprint from cell-free DNA"](https://www.nature.com/articles/s42003-024-06769-3), *Communications Biology*, September 2024.
+
+## People
+
+- Diana Abdueva — Founder and Chief Executive Officer
+- Rich Rava — Co-founder
+- Maggie Louie — VP, Translational Research and Strategic Partnerships
+- Ferhan Qureshi — Chief Technology Officer (appointed July 2026)
+- Bill Arteca — Head of Biospecimen Strategy (appointed July 2026)
+- Gregg C. Fergus — Board of Directors (appointed December 2023)
+
+## Funding
+
+- Series A: USD 16 million, announced October 2023, alongside initiation of PRIMA-102.
+- Series B: over USD 31 million, announced July 2025. Investors named: Bold Capital, Bold Longevity Growth Fund, Genoa Ventures, Manta Ray Ventures, Yu Galaxy.
+
+## Contact and social
+
+- media@aqtual.com — media and general contact
+- Phone: 341-208-8569
+- [LinkedIn](https://www.linkedin.com/company/aqtual)
+- The site's contact form routes general, employment, investor-relations and clinical-trial inquiries.
+
+## Code and packages
+
+- No GitHub organization named `aqtual` exists. No first-party client libraries are published on npm, PyPI, RubyGems, crates.io, Packagist, NuGet or Maven Central. See `packages/aqtual-packages.yml`.
+
+## What this repo contains
+
+- `well-known/aqtual-well-known.yml`: the full `/.well-known/` and contract-discovery probe record (all misses, recorded with status codes)
+- `packages/aqtual-packages.yml`: registry search record (no first-party packages)
+- `conformance/aqtual-conformance.yml`: CLIA / CAP / FDA-LDT / HIPAA regulatory posture, recorded honestly as unknown or pre-commercial; API standards recorded as not-applicable
+- `security/aqtual-domain-security.yml`: TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe of aqtual.com
+- `llms/aqtual-llms.txt`: this file
+
+## Notable gaps (as of 2026-08-02)
+
+Aqtual publishes no privacy policy, no terms of service, no security.txt, no responsible-disclosure page, no trust center and no status page. For a company that will handle patient specimens and protected health information at commercial launch, the absence of a published privacy notice is the most material gap on the public site.
