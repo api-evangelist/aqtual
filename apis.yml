@@ -19,6 +19,17 @@ description: 'Aqtual, Inc. is a Hayward, California precision-medicine company f
   documentation and no machine-readable API contract of any kind, and every /.well-known/
   and contract-discovery path on aqtual.com returns 404.'
 url: https://raw.githubusercontent.com/api-evangelist/aqtual/refs/heads/main/apis.yml
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://aqtual.com/apple-touch-icon-152x152.png
 x-type: company
 x-source: harvest:secondary-market
