@@ -64,23 +64,80 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aqtual, Inc. is a Hayward, California precision-medicine company founded in 2019 by Diana Abdueva (Founder and CEO) with co-founder Rich Rava. It develops blood-based diagnostics on a proprietary "active chromatin" cell-free DNA (cfDNA) platform that reads DNA, epigenetic regulation and protein-DNA binding from a single routine blood draw. Its lead product is a therapy-response prediction test for rheumatoid arthritis, evaluated in the prospective PRIMA-102 trial (NCT05936970), with oncology programs in leiomyosarcoma immunotherapy response and early colorectal cancer detection. It raised a USD 16M Series A in October 2023 and over USD 31M in Series B funding announced July 2025.
+Aqtual, Inc. is a Hayward, California precision-medicine company founded in 2019 by Diana Abdueva (Founder and CEO) and co-founder Rich Rava, developing blood-based diagnostics on a proprietary "active chromatin" cell-free DNA (cfDNA) platform. Rather than reading cfDNA for mutations alone, Aqtual captures the previously unexplored cfDNA fragments bound to active chromatin, so a single routine blood draw reports on DNA, epigenetic regulation and protein-DNA binding together — surveying on the order of 200,000 gene promoters, 400,000 enhancers, 50,000 insulators, 20,000 silencers and a million transcription-factor binding sites. Its lead product is a therapy-response prediction test for rheumatoid arthritis, evaluated in the prospective PRIMA-102 observational trial (NCT05936970), with oncology programs in leiomyosarcoma immunotherapy response and early colorectal cancer detection, and stated expansion into immunology, cardiovascular, metabolic and neurological disease. The company raised a USD 16 million Series A in October 2023 and over USD 31 million in Series B funding announced July 2025 from Bold Capital, the Bold Longevity Growth Fund, Genoa Ventures, Manta Ray Ventures and Yu Galaxy. Aqtual is a clinical-diagnostics and life-sciences business, not a software vendor: as of August 2026 it publishes no developer portal, no API documentation and no machine-readable API contract of any kind, and every /.well-known/ and contract-discovery path on aqtual.com returns 404.
 
-**Aqtual publishes no public API.** As of 2026-08-02 there is no developer portal, no API documentation and no machine-readable API contract of any kind. Every `/.well-known/` and contract-discovery path on `aqtual.com` returns 404, and no `api.`, `docs.`, `developer.`, `portal.` or `app.` subdomain resolves. The probe record is in `well-known/aqtual-well-known.yml`.
+**Areas:** Company · Precision Medicine · Diagnostics · Liquid Biopsy · Cell-Free DNA · Epigenetics · Genomics · Biotechnology · Oncology · Rheumatology · Healthcare · United States
 
-- https://aqtual.com/
-- https://aqtual.com/newsroom/
-- https://aqtual.com/publications/
-- https://www.linkedin.com/company/aqtual
-- https://clinicaltrials.gov/study/NCT05936970
-- https://forgeglobal.com/aqtual_stock/
+## Aqtual on APIs.io
 
-## Artifacts
+Everything profiled for Aqtual is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aqtual/](https://apis.io/providers/aqtual/)** — or go straight to one of the APIs or properties below.
 
-| Path | What it is |
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aqtual Domain Security](https://apis.io/security/aqtual/aqtual-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aqtual.com/)
+- [Blog](https://aqtual.com/blog/)
+
+## API Evangelist rating
+
+**Kin Score 6.5** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `well-known/aqtual-well-known.yml` | `/.well-known/` + contract-discovery probe record (all misses, with status codes) |
-| `packages/aqtual-packages.yml` | Package-registry search record — no first-party client libraries |
-| `conformance/aqtual-conformance.yml` | CLIA / CAP / FDA-LDT / HIPAA regulatory posture; API standards recorded not-applicable |
-| `security/aqtual-domain-security.yml` | TLS / HSTS / DNSSEC / CAA / SPF / DMARC probe of `aqtual.com` |
-| `llms/aqtual-llms.txt` | Generated `llms.txt` summary of the company for agents |
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 8.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aqtual/](https://apis.io/providers/aqtual/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Aqtual: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aqtual/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
